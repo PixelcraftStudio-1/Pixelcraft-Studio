@@ -63,6 +63,7 @@
       justify-content: flex-start;
       padding: 100px 60px 60px;
       gap: 50px;
+      flex-wrap: wrap;
     }
 
     /* Sección principal */
@@ -70,8 +71,8 @@
       animation: fadeIn 1.5s ease;
       display: flex;
       flex-direction: column;
-      gap: 30px;
-      max-width: 500px;
+      gap: 20px;
+      max-width: 600px;
     }
 
     /* Cuadro pequeño */
@@ -85,6 +86,14 @@
       border-radius: 8px;
     }
 
+    /* Texto descriptivo */
+    .description {
+      font-size: 1.2em;
+      color: #ddd;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+
     /* Texto grande tipo máquina de escribir */
     .typewriter {
       font-size: 3em;
@@ -94,6 +103,7 @@
       white-space: nowrap;
       letter-spacing: .05em;
       animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+      margin-top: 10px;
     }
 
     @keyframes typing {
@@ -160,6 +170,9 @@
   <main>
     <div class="section">
       <div class="small-box">Estudio Profesional de Roblox</div>
+      <div class="description">
+        Somos un estudio profesional de Roblox que transforma tus ideas en <b>eventos y experiencias extraordinarias.</b>
+      </div>
       <div class="typewriter">Creamos Juegos Épicos</div>
 
       <div>
