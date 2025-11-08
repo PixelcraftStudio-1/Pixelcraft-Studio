@@ -86,24 +86,17 @@
       border-radius: 8px;
     }
 
-    /* Texto descriptivo */
-    .description {
-      font-size: 1.2em;
-      color: #ddd;
-      line-height: 1.5;
-      margin-top: 10px;
-    }
-
     /* Texto grande tipo máquina de escribir */
     .typewriter {
       font-size: 3em;
       font-weight: 700;
       overflow: hidden;
       border-right: .15em solid #0ff;
-      white-space: nowrap;
+      white-space: pre; /* para saltos de línea */
       letter-spacing: .05em;
       animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
       margin-top: 10px;
+      line-height: 1.2;
     }
 
     @keyframes typing {
@@ -113,6 +106,14 @@
 
     @keyframes blink {
       50% { border-color: transparent; }
+    }
+
+    /* Descripción */
+    .description {
+      font-size: 1.2em;
+      color: #ddd;
+      line-height: 1.5;
+      margin-top: 10px;
     }
 
     /* Botones */
@@ -170,10 +171,13 @@
   <main>
     <div class="section">
       <div class="small-box">Estudio Profesional de Roblox</div>
+      
+      <div class="typewriter">Creamos
+Juegos Épicos</div>
+
       <div class="description">
         Somos un estudio profesional de Roblox que transforma tus ideas en <b>eventos y experiencias extraordinarias.</b>
       </div>
-      <div class="typewriter">Creamos Juegos Épicos</div>
 
       <div>
         <a href="proyectos.html"><button class="btn">Ver Proyectos</button></a>
