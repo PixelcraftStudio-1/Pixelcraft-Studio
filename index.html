@@ -92,7 +92,7 @@
       font-weight: 700;
       overflow: hidden;
       border-right: .15em solid #0ff;
-      white-space: pre; /* para saltos de línea */
+      white-space: nowrap; /* Una sola línea */
       letter-spacing: .05em;
       animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
       margin-top: 10px;
@@ -172,8 +172,7 @@
     <div class="section">
       <div class="small-box">Estudio Profesional de Roblox</div>
       
-      <div class="typewriter">Creamos
-Juegos Épicos</div>
+      <div class="typewriter">Creamos Juegos Épicos</div>
 
       <div class="description">
         Somos un estudio profesional de Roblox que transforma tus ideas en <b>eventos y experiencias extraordinarias.</b>
@@ -210,7 +209,7 @@ Juegos Épicos</div>
       counters.forEach(counter => {
         const target = +counter.getAttribute('data-target');
         let count = 0;
-        const speed = 150; // más lento que antes
+        const speed = 150; // más lento
         const updateCount = () => {
           if(count < target) {
             count++;
