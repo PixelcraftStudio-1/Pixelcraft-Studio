@@ -6,11 +6,7 @@
   <title>Pixelcraft Studio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -64,10 +60,13 @@
       color: #ccc;
     }
 
+    section {
+      padding: 100px 60px;
+      min-height: 100vh;
+    }
+
     .hero {
       text-align: left;
-      padding: 120px 60px;
-      min-height: 100vh;
       background: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,1)),
         url('https://i.imgur.com/GDAE3Sw.jpeg') no-repeat center center/cover;
       display: flex;
@@ -95,9 +94,15 @@
       text-shadow: 0 0 10px rgba(255,255,255,0.1);
     }
 
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
     p {
       font-size: 1.1rem;
-      max-width: 600px;
+      max-width: 700px;
       margin: 20px 0;
       color: #ccc;
     }
@@ -139,6 +144,14 @@
       background-color: #fff;
       color: #000;
     }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background-color: #111;
+      color: #888;
+      border-top: 1px solid #222;
+    }
   </style>
 </head>
 <body>
@@ -148,23 +161,55 @@
       Pixelcraft Studio
     </div>
     <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Proyectos</a>
-      <a href="#">Servicios</a>
-      <a href="#">Equipo</a>
-      <a href="#">Amigos</a>
-      <a href="#">Contacto</a>
+      <a href="#inicio">Inicio</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#amigos">Amigos</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
-  <section class="hero">
+  <section id="inicio" class="hero">
     <div class="tag">Estudio Profesional de Roblox y Minecraft</div>
     <h1>Creamos Juegos de<br>Roblox y Minecraft</h1>
     <p>Somos un estudio profesional que transforma tus ideas en experiencias interactivas extraordinarias. Desde mundos creativos hasta proyectos épicos.</p>
     <div class="buttons">
-      <button class="btn btn-primary">Ver Proyectos</button>
-      <button class="btn btn-outline">Contactar Ahora</button>
+      <button class="btn btn-primary" onclick="document.getElementById('proyectos').scrollIntoView({behavior:'smooth'})">Ver Proyectos</button>
+      <button class="btn btn-outline" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Contactar Ahora</button>
     </div>
   </section>
+
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <p>Aquí mostramos algunos de nuestros proyectos más destacados en Roblox y Minecraft. Desde mapas de aventuras hasta experiencias multijugador.</p>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <p>Ofrecemos desarrollo de juegos, diseño de mundos, scripting, optimización y consultoría para creadores y estudios.</p>
+  </section>
+
+  <section id="equipo">
+    <h2>Equipo</h2>
+    <p>Somos un grupo de desarrolladores, artistas y diseñadores apasionados por crear experiencias únicas en Roblox y Minecraft.</p>
+  </section>
+
+  <section id="amigos">
+    <h2>Amigos y Colaboradores</h2>
+    <p>Trabajamos con creadores, estudios y comunidades que comparten nuestra pasión por la innovación y la diversión.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes una idea genial o quieres colaborar con nosotros? Escríbenos y hagamos algo épico juntos.</p>
+    <div class="buttons">
+      <a href="mailto:pixelcraftstudio@gmail.com" class="btn btn-primary">Enviar Correo</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Pixelcraft Studio — Todos los derechos reservados.
+  </footer>
 </body>
 </html>
